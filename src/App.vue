@@ -1,14 +1,14 @@
 <template>
   <ImgComparisonSlider>
     <img
-        slot="before"
+        slot="first"
         style="width: 100%"
-        src="https://sneas.github.io/img-comparison-slider/demo/images/cat.jpg"
+        src="https://sneas.github.io/img-comparison-slider/demo/images/before.webp"
     />
     <img
-        slot="after"
+        slot="second"
         style="width: 100%"
-        src="https://sneas.github.io/img-comparison-slider/demo/images/dog.jpg"
+        src="https://sneas.github.io/img-comparison-slider/demo/images/after.webp"
     />
   </ImgComparisonSlider>
 </template>
@@ -21,6 +21,11 @@ export default defineComponent({
   name: 'App',
   components: {
     ImgComparisonSlider
+  },
+  methods: {
+    onSlide: (event: any) => {
+      console.log(event);
+    }
   }
 })
 </script>
