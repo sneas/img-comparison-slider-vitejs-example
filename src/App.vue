@@ -3,40 +3,23 @@
     <img
         slot="first"
         style="width: 100%"
-        src="https://sneas.github.io/img-comparison-slider/demo/images/before.webp"
+        src="https://img-comparison-slider.sneas.io/demo/images/before.webp"
     />
     <img
         slot="second"
         style="width: 100%"
-        src="https://sneas.github.io/img-comparison-slider/demo/images/after.webp"
+        src="https://img-comparison-slider.sneas.io/demo/images/after.webp"
     />
   </ImgComparisonSlider>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import { ImgComparisonSlider } from '@img-comparison-slider/vue'
+<script>
+import { ImgComparisonSlider } from '@img-comparison-slider/vue';
 
-export default defineComponent({
-  name: 'App',
+export default {
+  name: 'ExampleComponent',
   components: {
-    ImgComparisonSlider
+    ImgComparisonSlider,
   },
-  methods: {
-    onSlide: (event: any) => {
-      console.log(event);
-    }
-  }
-})
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
